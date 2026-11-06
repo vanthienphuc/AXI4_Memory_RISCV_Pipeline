@@ -287,7 +287,7 @@ Both the RV32I 5-Stage Pipeline Baseline core and the upgraded AXI4-Lite process
 
 ### Architectural Takeaways & Future Work
 - **Cycle-Accurate Proof**: Total execution time scales deterministically:
-  $$\text{Total Cycles}_{\text{AXI}} = \text{Total Cycles}_{\text{Baseline}} + \text{AXI Wait-State Cycles} = 195 + 84 = 279 \text{ cycles}$$
+  `Total Cycles (AXI) = Total Cycles (Baseline) + AXI Wait-State Cycles = 195 + 84 = 279 cycles`
 - **Future Enhancements**: To mitigate the $3$-cycle per-access AXI4-Lite latency penalty on CPI, the modular `MEM` interface can be extended with a direct-mapped **L1 Data Cache (D-Cache)** between the CPU and `axi4_master_bridge`, or upgraded to **AMBA AXI4-Full** to leverage burst transfers (`AWLEN`/`ARLEN`) during sequential array loops.
 
 ---
