@@ -255,7 +255,8 @@ Before connecting the RISC-V pipeline, `tb_axi4_subsystem.v` emulates CPU bus ma
 
 [View Verification Plan AXI4 subsystem (pdf)](Verification_plan_AXI4_subsystem.pdf)
 
-[![Pipeline test results](images/Pipeline%20test%20results.png)](images/Pipeline%20test%20results.png)
+**Verification result AXI4 standalone test**
+[![Pipeline test results](images/AXI4%20standalone%20test%20results.png)](images/AXI4%20standalone%20test%20results.png)
 
 ### Phase 2: Full System Integration & Self-Checking Workload (`tb_RISCV_Pipeline_AXI4.v` & `sw/test.S`)
 The RISC-V GNU toolchain compiles `sw/test.S` into `mem/imem.hex` and `mem/dmem_init.hex`. The self-checking program validates results via `bne` branches and writes the final status to architectural register `x7` (`x7 = 1` for **PASS**, `x7 = -1` / `0xFFFFFFFF` for **FAIL**):
